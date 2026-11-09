@@ -1,0 +1,63 @@
+{
+  "titre": "Que vérifie une règle ?",
+  "ouverture": "Deux variantes de S14 respectent le seuil de 400 caractères. Comment savoir si elles restent fidèles à la source ?",
+  "public": "Formateurs débutants qui relisent un premier support produit avec l’IA.",
+  "source": "Produire avec l’IA sous responsabilité humaine — Guide pratique, V2 à relire. Étape 5 du guide et journal de corrections S12.",
+  "fait1": "Le dossier conserve les versions V1 et V2 du guide.",
+  "fait2": "Le journal explique les corrections et leurs raisons.",
+  "action": "Souhaitez-vous voir un extrait du journal de corrections ?",
+  "messageA": "Le dossier conserve V1 et V2 du guide. Le journal explique chaque correction et sa raison. Souhaitez-vous voir un extrait du journal de corrections ?",
+  "messageC": "Le dossier conserve les versions V1 et V2 du guide. Le journal explique ce qui a changé et pourquoi. Souhaitez-vous voir un extrait du journal de corrections ?",
+  "variable": "La formulation de la proposition",
+  "gabarit": "{titre} — {proposition} {action}",
+  "gabaritChamps": {
+    "titre": "Révision du guide",
+    "proposition": "Le journal explique ce qui a changé et pourquoi.",
+    "action": "Souhaitez-vous voir un extrait du journal de corrections ?"
+  },
+  "seuil": 400,
+  "ok": "Longueur acceptable",
+  "alerte": "À raccourcir",
+  "etalon": "0123456789",
+  "suffixe": "X",
+  "samira": {
+    "source": "Mini-guide fictif de Samira pour les étudiants. Il contient un planning hebdomadaire et une liste de vérification.",
+    "avant": "Ce guide doublera vos notes.",
+    "apres": "Le mini-guide propose un planning hebdomadaire et une liste de vérification.",
+    "motif": "La fiche de Samira décrit ces deux outils. Elle ne documente aucun effet sur les notes."
+  },
+  "ete": {
+    "titre": "Guide Situation-Actuelle-IA",
+    "auteur": "Abderrahman El Hisse",
+    "edition": "Édition maître V1.0 · juillet 2026",
+    "fait": "Huit chapitres et huit annexes",
+    "action": "Souhaitez-vous consulter le sommaire ?",
+    "formats": [
+      {
+        "id": "court",
+        "nom": "Court",
+        "texte": "Guide Situation-Actuelle-IA : huit chapitres et huit annexes. Souhaitez-vous consulter le sommaire ?"
+      },
+      {
+        "id": "communautaire",
+        "nom": "Communautaire",
+        "texte": "Vous travaillez avec des collègues sur les usages de l’IA ? Le Guide Situation-Actuelle-IA réunit huit chapitres et huit annexes pour nourrir cet échange. Souhaitez-vous consulter le sommaire ?"
+      },
+      {
+        "id": "professionnel",
+        "nom": "Professionnel",
+        "texte": "Dans le Guide Situation-Actuelle-IA, Abderrahman El Hisse présente huit chapitres et huit annexes consacrés à la production et au contrôle des usages de l’IA. Souhaitez-vous consulter le sommaire ?"
+      },
+      {
+        "id": "visuel",
+        "nom": "Visuel textuel",
+        "texte": "Guide Situation-Actuelle-IA — huit chapitres et huit annexes\nComprendre · Contrôler\nSouhaitez-vous consulter le sommaire ?"
+      }
+    ]
+  },
+  "s15": "Vendredi 13 novembre 2026",
+  "s16": "Lundi 16 novembre 2026",
+  "preuve": "preuve-15-regles-adaptation-automatisation",
+  "trace": "04-communication/comprendre-regles-automatisation.md",
+  "index": "07-portfolio/preuves-module-04.md"
+}

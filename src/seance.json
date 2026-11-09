@@ -1,0 +1,802 @@
+{
+  "questions": [
+    [
+      "01 · Invariant",
+      "Quel fait doit rester vrai ?",
+      "Dans les versions A et C de S14, le journal explique les corrections. Vérifiez cette affirmation dans le journal de S12, puis soulignez-la dans les deux textes."
+    ],
+    [
+      "02 · Variable",
+      "Qu’avez-vous le droit de changer ?",
+      "Vous pouvez modifier l’accroche, le ton ou le format en gardant le sens de la proposition et l’action adressée au même public."
+    ],
+    [
+      "03 · Gabarit",
+      "Comment garder une même structure ?",
+      "Réservez trois places nommées : {titre}, {proposition} et {action}. Renseignez chaque valeur puis relisez le message assemblé."
+    ],
+    [
+      "04 · Condition",
+      "Que se passe-t-il à la limite ?",
+      "Si la longueur dépasse 400 caractères, la règle affiche « À raccourcir ». À 400 exactement, elle affiche « Longueur acceptable »."
+    ],
+    [
+      "05 · Répétition",
+      "Que devient une erreur répétée ?",
+      "Si vous partez d’une promesse inventée, une boucle peut la recopier dans plusieurs formats. Examinez d’abord le fait dans la source."
+    ],
+    [
+      "06 · Relecture",
+      "Qui se prononce sur le sens ?",
+      "Le candidat cite le passage source, corrige le message et explique la décision. Le pilote examine la preuve. Le résultat de longueur porte uniquement sur le nombre de caractères."
+    ]
+  ],
+  "roles": [
+    [
+      "Candidat",
+      "Choisit un fait, prédit deux résultats, observe le test et défend une correction."
+    ],
+    [
+      "Agent IA",
+      "Peut lire les fichiers fictifs autorisés, proposer un plan de tests et chercher un contre-exemple. Il signale ce qui reste à prouver."
+    ],
+    [
+      "Python",
+      "Exécute le gabarit, la condition et la répétition. Avec len(texte), il compte les caractères du texte fourni."
+    ],
+    [
+      "Jupyter",
+      "Rassemble explications, code et sorties. Le noyau Python exécute les cellules devant les candidats."
+    ],
+    [
+      "Pilote humain",
+      "Vérifie la fidélité des affirmations et statue sur la preuve. Toute autorisation de diffusion relève d’une décision distincte."
+    ]
+  ],
+  "cards": [
+    [
+      "Qu’est-ce qu’un invariant ?",
+      "Un fait que la source soutient et qui doit rester vrai dans les différents messages."
+    ],
+    [
+      "Quelle différence entre une variable et sa valeur ?",
+      "La variable est un nom, comme format_message. Sa valeur peut être « professionnel » dans un essai et « court » dans un autre."
+    ],
+    [
+      "Quel est le rôle du gabarit ?",
+      "Il définit la place des informations. Le texte assemblé doit encore être confronté à la source."
+    ],
+    [
+      "À 400 caractères, que répond la règle ?",
+      "« Longueur acceptable ». Le seuil de 400 est inclus pour cet exercice."
+    ],
+    [
+      "Un caractère est ajouté au texte étalon. Que prévoit-on ?",
+      "À 401 caractères, le contrôle affiche « À raccourcir »."
+    ],
+    [
+      "Que risque de reproduire une répétition ?",
+      "Une erreur de la fiche de départ peut apparaître dans chacun des brouillons."
+    ],
+    [
+      "Que montre le contre-exemple de Samira ?",
+      "Sa promesse de doubler les notes tient en 28 caractères. Seule la lecture de la fiche montre qu’elle n’a aucun appui."
+    ],
+    [
+      "Que faut-il préparer pour S16 ?",
+      "Une règle testable et le tableau « champ, valeur, source ou justification » qui permettra de renseigner le notebook."
+    ]
+  ],
+  "quiz": [
+    [
+      "Les versions A et C changent de ton. Qu’est-ce qui doit rester stable ?",
+      [
+        "La longueur au caractère près",
+        "Le fait que le journal explique les corrections",
+        "Le premier mot de la phrase"
+      ],
+      1,
+      "Un fait vérifiable est conservé même si la formulation change."
+    ],
+    [
+      "Quel gabarit utilise les trois informations convenues ?",
+      [
+        "{titre} — {proposition} {action}",
+        "{canal} — {public}",
+        "Si la longueur dépasse 400"
+      ],
+      0,
+      "Les trois places du gabarit accueillent les valeurs que le candidat a vérifiées."
+    ],
+    [
+      "La condition est « longueur supérieure à 400 ». Que se passe-t-il à 400 puis à 401 ?",
+      [
+        "À raccourcir dans les deux cas",
+        "Longueur acceptable dans les deux cas",
+        "Longueur acceptable à 400 puis À raccourcir à 401"
+      ],
+      2,
+      "400 est inclus. Un caractère de plus déclenche l’alerte."
+    ],
+    [
+      "« Ce guide doublera vos notes. » Que décidez-vous après le test ?",
+      [
+        "Garder cette promesse car elle est courte",
+        "Corriger la promesse en citant un fait de la fiche",
+        "Ajouter la même affirmation aux quatre formats"
+      ],
+      1,
+      "La fiche fictive établit un planning et une liste de vérification. Elle n’établit aucun gain de notes."
+    ],
+    [
+      "Quelle mission confier à l’agent de S15 ?",
+      [
+        "Déclarer la production prête à publier",
+        "Modifier les sources pour faire réussir le contrôle",
+        "Proposer les entrées de test, les résultats attendus et un contre-exemple"
+      ],
+      2,
+      "Le candidat compare ensuite les prédictions aux sorties réellement observées et explique la limite."
+    ],
+    [
+      "Quelle trace permet au pilote de préparer S16 ?",
+      [
+        "Un invariant, une variable, la condition, deux tests, une limite expliquée et le tableau de données",
+        "Une capture du quiz",
+        "Un message qui fait moins de 400 caractères"
+      ],
+      0,
+      "Ces éléments permettent de rejouer le contrôle et de retrouver l’origine des valeurs du prochain notebook."
+    ]
+  ],
+  "prompts": [
+    [
+      "01 · Relire deux versions",
+      "Agent lecteur",
+      "Lis seulement la trace fictive de S14 et le journal source fournis. Compare A et C corrigée. Rends un tableau avec les colonnes affirmation, passage d’appui, invariant, formulation qui change. Si un fait manque, inscris « à confirmer ». Arrête-toi après le relevé, sans modifier de fichier."
+    ],
+    [
+      "02 · Concevoir des tests",
+      "Agent chargé du plan de tests",
+      "La règle d’exercice est : pour un message renseigné, si la longueur dépasse 400 caractères, afficher « À raccourcir », sinon « Longueur acceptable ». Propose un essai exactement à 400, un autre à 401 et un texte bref dont le sens doit être confronté à la source. Donne les entrées et les prédictions. Distingue explicitement les prédictions des exécutions observées. Rends le plan et arrête-toi."
+    ],
+    [
+      "03 · Chercher un contre-exemple",
+      "Agent contradicteur",
+      "Lis la fiche fictive de Samira et le message « Ce guide doublera vos notes. ». Relève l’affirmation principale. Indique ce que le test de longueur peut montrer, puis cherche le passage qui justifierait le gain annoncé. Si ce passage manque, signale-le. Propose une reformulation fidèle et la référence à vérifier. Je prendrai la décision."
+    ],
+    [
+      "04 · Préparer le notebook S16",
+      "Assistant de préparation",
+      "À partir de ma trace de S15, organise les données dans un tableau « champ, valeur, source ou justification ». Utilise projet, public, besoin, proposition, action et format. Laisse les absences visibles. Recopie la condition et les deux sorties observées sans les inventer. Signale les éléments qui nécessitent encore l’examen du formateur. Rends le tableau ; aucune diffusion."
+    ]
+  ],
+  "criteres": [
+    "Je retrouve mes deux variantes S14 et l’appui de l’invariant.",
+    "Je distingue une variable de sa valeur et je peux lire mon gabarit.",
+    "J’ai prédit puis observé les sorties à 400 et 401 caractères.",
+    "J’explique pourquoi la promesse courte échoue à la relecture et je justifie ma correction.",
+    "Mon tableau de données et ma règle de contrôle sont prêts à être repris en S16."
+  ],
+  "champs": [
+    [
+      "source",
+      "Document source et repère",
+      "Titre, version ou statut, section ou passage."
+    ],
+    [
+      "variante1",
+      "Première variante de S14",
+      "Collez le premier texte à comparer."
+    ],
+    [
+      "variante2",
+      "Seconde variante de S14",
+      "Collez une autre version ou le texte corrigé."
+    ],
+    [
+      "invariant",
+      "Fait invariant et appui",
+      "Le fait commun et l’endroit précis où le vérifier."
+    ],
+    [
+      "variable",
+      "Variable et valeurs observées",
+      "Par exemple, quelle formulation diffère entre vos deux textes ?"
+    ],
+    [
+      "gabarit",
+      "Mon gabarit",
+      "Une structure avec trois places nommées."
+    ],
+    [
+      "condition",
+      "Ma règle en mots",
+      "Si… alors… sinon…"
+    ],
+    [
+      "repetition",
+      "Ce que répète la machine",
+      "Expliquez sur quels messages vous appliquez la même règle."
+    ],
+    [
+      "prev400",
+      "Ma prédiction à 400",
+      "Choisissez un résultat."
+    ],
+    [
+      "prev401",
+      "Ma prédiction à 401",
+      "Choisissez un résultat."
+    ],
+    [
+      "obs400",
+      "Résultat observé à 400",
+      "Après l’essai."
+    ],
+    [
+      "obs401",
+      "Résultat observé à 401",
+      "Après l’essai."
+    ],
+    [
+      "conclusiontests",
+      "Ce que montrent les deux essais",
+      "Expliquez de quel côté de la frontière se trouve 400."
+    ],
+    [
+      "avant",
+      "Affirmation à vérifier",
+      "Le passage qui pose problème."
+    ],
+    [
+      "apres",
+      "Ma correction humaine",
+      "Une formulation effectivement appuyée par la source."
+    ],
+    [
+      "motif",
+      "Appui et raison de la correction",
+      "Quel passage justifie votre correction ?"
+    ],
+    [
+      "limite",
+      "Limite de la règle",
+      "Quel texte peut passer le test tout en posant problème ?"
+    ],
+    [
+      "s16_projet",
+      "Projet",
+      "Valeur à reprendre dans le notebook."
+    ],
+    [
+      "ref_projet",
+      "Source ou justification",
+      "Référence, passage ou décision d’adaptation."
+    ],
+    [
+      "s16_public",
+      "Public",
+      "Valeur à reprendre dans le notebook."
+    ],
+    [
+      "ref_public",
+      "Source ou justification",
+      "Référence, passage ou décision d’adaptation."
+    ],
+    [
+      "s16_besoin",
+      "Besoin",
+      "Valeur à reprendre dans le notebook."
+    ],
+    [
+      "ref_besoin",
+      "Source ou justification",
+      "Référence, passage ou décision d’adaptation."
+    ],
+    [
+      "s16_proposition",
+      "Proposition",
+      "Valeur à reprendre dans le notebook."
+    ],
+    [
+      "ref_proposition",
+      "Source ou justification",
+      "Référence, passage ou décision d’adaptation."
+    ],
+    [
+      "s16_action",
+      "Action",
+      "Valeur à reprendre dans le notebook."
+    ],
+    [
+      "ref_action",
+      "Source ou justification",
+      "Référence, passage ou décision d’adaptation."
+    ],
+    [
+      "s16_format",
+      "Format",
+      "Valeur à reprendre dans le notebook."
+    ],
+    [
+      "ref_format",
+      "Source ou justification",
+      "Référence, passage ou décision d’adaptation."
+    ]
+  ],
+  "rubriques": [
+    [
+      "accueil",
+      "Accueil",
+      "home"
+    ],
+    [
+      "presentation",
+      "Présentation",
+      "play"
+    ],
+    [
+      "methode",
+      "Méthode",
+      "compass"
+    ],
+    [
+      "demonstration",
+      "Démonstration",
+      "layers"
+    ],
+    [
+      "atelier",
+      "Atelier",
+      "edit"
+    ],
+    [
+      "prompts",
+      "Prompts",
+      "braces"
+    ],
+    [
+      "flashcards",
+      "Flashcards",
+      "cards"
+    ],
+    [
+      "quiz",
+      "Quiz",
+      "help"
+    ],
+    [
+      "validation",
+      "Validation",
+      "check"
+    ],
+    [
+      "portfolio",
+      "Portfolio",
+      "folder"
+    ],
+    [
+      "ressources",
+      "Ressources",
+      "book"
+    ]
+  ],
+  "cal": [
+    [
+      "13",
+      "VEN. 06 NOV.",
+      "Comprendre",
+      "Repérer les faits dans le guide S12 et expliquer une décision."
+    ],
+    [
+      "14",
+      "LUN. 09 NOV.",
+      "Manipuler",
+      "Comparer trois formulations et justifier une correction."
+    ],
+    [
+      "15",
+      "VEN. 13 NOV.",
+      "Approfondir",
+      "Tester une condition et en expliquer la limite."
+    ],
+    [
+      "16",
+      "LUN. 16 NOV.",
+      "Produire",
+      "Exécuter un notebook, corriger puis rouvrir l’export local."
+    ]
+  ],
+  "slides": [
+    [
+      "Que vérifie une règle ?",
+      "Automatisation progressive et contrôle humain.",
+      [
+        "Vendredi 13 novembre 2026",
+        "Module 04 · S15 · Approfondir",
+        "90 minutes avec le Prof. Abderrahman El Hisse"
+      ],
+      "0–15 min · Accueillez le groupe. Demandez la trace S13 et deux variantes S14. Proposez le cas du dossier fictif aux participants qui n’ont pas leurs fichiers."
+    ],
+    [
+      "Un texte court dit-il vrai ?",
+      "Deux variantes de S14 respectent le seuil de 400 caractères. Comment savoir si elles restent fidèles à la source ?",
+      [
+        "Relisez deux formulations.",
+        "Montrez le passage qui justifie leur contenu."
+      ],
+      "Posez la question avant d’ouvrir le simulateur. Recueillez une hypothèse sur la longueur et une deuxième sur la fidélité à la source."
+    ],
+    [
+      "Deux messages issus de S14",
+      "A, courte et directe, et C, corrigée pour un courriel professionnel.",
+      [
+        "Le dossier conserve V1 et V2 du guide. Le journal explique chaque correction et sa raison. Souhaitez-vous voir un extrait du journal de corrections ?",
+        "Le dossier conserve les versions V1 et V2 du guide. Le journal explique ce qui a changé et pourquoi. Souhaitez-vous voir un extrait du journal de corrections ?"
+      ],
+      "Projetez les deux messages. Faites souligner dans chacun la référence aux deux versions du guide, puis la question finale. Les mesures sont A = 149 et C corrigée = 159 caractères."
+    ],
+    [
+      "Ce qui reste stable et ce qui varie",
+      "Le dossier conserve les versions V1 et V2 du guide.",
+      [
+        "Le journal explique les corrections et leurs raisons.",
+        "La formulation de la proposition",
+        "Souhaitez-vous voir un extrait du journal de corrections ?"
+      ],
+      "Revenez au guide S12, étape 5, et au journal des corrections. Dans ce cas, les deux faits et la demande restent stables. La formulation du journal et le ton peuvent changer."
+    ],
+    [
+      "Renseigner les trois champs",
+      "Choisissez une valeur pour chaque emplacement du gabarit.",
+      [
+        "Révision du guide",
+        "Le journal explique ce qui a changé et pourquoi.",
+        "Souhaitez-vous voir un extrait du journal de corrections ?"
+      ],
+      "15–35 min · Dites à voix haute le nom de chaque champ : titre, proposition, action. Demandez au groupe lequel pourrait changer sans modifier un fait."
+    ],
+    [
+      "Assembler un message avec un gabarit",
+      "{titre} — {proposition} {action}",
+      [
+        "Révision du guide — Le journal explique ce qui a changé et pourquoi. Souhaitez-vous voir un extrait du journal de corrections ?",
+        "Modifiez uniquement la proposition. Prédisez la nouvelle sortie."
+      ],
+      "Affichez le gabarit puis le message assemblé. La substitution organise les champs. Pour vérifier la proposition, le candidat doit encore ouvrir le guide ou le journal."
+    ],
+    [
+      "Énoncer une condition testable",
+      "Règle de l’exercice : longueur du texte en caractères.",
+      [
+        "Si la longueur est inférieure ou égale à 400 : Longueur acceptable.",
+        "Si elle dépasse 400 : À raccourcir.",
+        "Espaces, ponctuation et sauts de ligne entrent dans le compte."
+      ],
+      "35–50 min · Ce seuil est une convention de l’exercice. Vérifiez que le groupe a repéré le signe égal et sait dire ce que les deux sorties signifient."
+    ],
+    [
+      "Demander un plan de tests à l’agent",
+      "Mission en lecture seule : proposer deux entrées et un contre-exemple.",
+      [
+        "Entrées · la règle, les deux brouillons fictifs et la fiche source.",
+        "Sortie · entrée, prédiction et élément à vérifier.",
+        "Arrêt · rendre le plan au candidat avant toute exécution."
+      ],
+      "Faites rédiger la mission : « Donne un exemple à la limite, un juste au-dessus et une phrase courte sans appui. » La sortie proposée reste une hypothèse tant que le test n’est pas exécuté."
+    ],
+    [
+      "Prédire avant de lancer le test",
+      "Le bloc 0123456789 contient dix caractères.",
+      [
+        "Test 1 · répéter le bloc 40 fois.",
+        "Test 2 · ajouter un seul X à la fin du premier texte.",
+        "Écrivez les deux résultats attendus."
+      ],
+      "Laissez les prédictions visibles sur papier. Le bloc sert uniquement d’étalon de longueur. Demandez quel changement minimal pourrait faire basculer le résultat."
+    ],
+    [
+      "Python applique la condition",
+      "Le nombre de caractères décide de la sortie de ce test.",
+      [
+        "n = len(message)",
+        "if n <= 400:",
+        "    resultat = \"Longueur acceptable\"",
+        "else:",
+        "    resultat = \"À raccourcir\""
+      ],
+      "Montrez le code préparé sans demander de le recopier. Demandez aux candidats quelle ligne est exécutée pour 400, puis pour 401. Les étudiants qui n’ont pas Python peuvent suivre les sorties fournies."
+    ],
+    [
+      "Observer les résultats dans Jupyter",
+      "Le noyau Python exécute la cellule. Jupyter affiche sa sortie.",
+      [
+        "400 caractères · Longueur acceptable",
+        "401 caractères · À raccourcir",
+        "Comparez chaque observation avec votre prédiction."
+      ],
+      "Montrez les deux cas et leur sortie. Retirez X puis relancez la cellule. Si le poste est indisponible, projetez le relevé d’exécution fourni. Comparez les deux observations avec les hypothèses."
+    ],
+    [
+      "Répéter le même contrôle",
+      "Appliquez la même condition aux deux formulations de S14.",
+      [
+        "A · 149 caractères · Longueur acceptable",
+        "C corrigée · 159 caractères · Longueur acceptable",
+        "Pour chaque texte, relevez ensuite un passage d’appui."
+      ],
+      "Expliquez la répétition en langage courant : pour chaque texte, mesurer, tester, afficher. Faites pointer les sources qui établissent les faits, puis passez à l’application sur le guide d’été."
+    ],
+    [
+      "Une source pour quatre formats",
+      "Guide Situation-Actuelle-IA",
+      [
+        "Abderrahman El Hisse",
+        "Édition maître V1.0 · juillet 2026",
+        "Huit chapitres et huit annexes",
+        "Souhaitez-vous consulter le sommaire ?"
+      ],
+      "50–70 min · Ouvrez le PDF du guide d’été. Identité éditoriale page 2, sommaire pages 3–4 et annexes à partir de la page 22. Les quatre exemples suivants sont des reformulations préparées pour l’automne. Le guide d’été est distinct du dossier S12."
+    ],
+    [
+      "Le format court",
+      "Guide Situation-Actuelle-IA : huit chapitres et huit annexes. Souhaitez-vous consulter le sommaire ?",
+      [
+        "Quel fait permet de garder le message bref ?",
+        "Brouillon à relire."
+      ],
+      "Faites nommer le titre, les huit chapitres, les huit annexes et la question finale. Le lecteur dispose de juste assez d’information pour demander le sommaire."
+    ],
+    [
+      "Le format communautaire",
+      "Vous travaillez avec des collègues sur les usages de l’IA ? Le Guide Situation-Actuelle-IA réunit huit chapitres et huit annexes pour nourrir cet échange. Souhaitez-vous consulter le sommaire ?",
+      [
+        "À quelle situation la phrase d’ouverture fait-elle appel ?",
+        "Brouillon à relire."
+      ],
+      "La première question évoque le travail avec des collègues. Faites distinguer cette accroche de la seule action proposée, demander le sommaire."
+    ],
+    [
+      "Le format professionnel",
+      "Dans le Guide Situation-Actuelle-IA, Abderrahman El Hisse présente huit chapitres et huit annexes consacrés à la production et au contrôle des usages de l’IA. Souhaitez-vous consulter le sommaire ?",
+      [
+        "Quels éléments donnent un contexte professionnel ?",
+        "Brouillon à relire."
+      ],
+      "L’auteur et le sujet situent la ressource pour un lecteur professionnel. Ouvrez la page d’identité éditoriale pour vérifier l’attribution."
+    ],
+    [
+      "Le format visuel textuel",
+      "Guide Situation-Actuelle-IA — huit chapitres et huit annexes\nComprendre · Contrôler\nSouhaitez-vous consulter le sommaire ?",
+      [
+        "Retrouvez le titre, les deux mots-clés et la demande.",
+        "Brouillon à relire."
+      ],
+      "Laissez les trois lignes visibles et faites lire les deux mots-clés. L’aspect visuel hiérarchise les éléments déjà vérifiés."
+    ],
+    [
+      "Expliquer la règle de format",
+      "Le titre, les huit chapitres, les huit annexes et la demande sont repris.",
+      [
+        "Court · garder l’essentiel.",
+        "Communautaire · choisir une accroche de groupe.",
+        "Professionnel · situer l’auteur et le sujet.",
+        "Visuel textuel · un titre, deux mots-clés et une action."
+      ],
+      "Repérez avec le groupe une différence autorisée et un fait que chaque format doit conserver. Si une entrée source devenait fausse, la répétition pourrait transmettre cette erreur à toutes les variantes."
+    ],
+    [
+      "Une promesse courte à examiner",
+      "Ce guide doublera vos notes.",
+      [
+        "28 caractères · Longueur acceptable",
+        "Mini-guide fictif de Samira pour les étudiants. Il contient un planning hebdomadaire et une liste de vérification.",
+        "Pouvez-vous justifier le doublement des notes par cette source ?"
+      ],
+      "70–85 min · Faites d’abord prédire le résultat de longueur. Donnez ensuite la fiche de Samira et accordez une minute aux binômes pour retrouver ou contester la promesse. Une absence d’appui conduit à réviser le brouillon."
+    ],
+    [
+      "Corriger en revenant à la source",
+      "Le mini-guide propose un planning hebdomadaire et une liste de vérification.",
+      [
+        "76 caractères · Longueur acceptable",
+        "La fiche de Samira décrit ces deux outils. Elle ne documente aucun effet sur les notes.",
+        "Conservez l’avant, l’après et la raison."
+      ],
+      "Lisez les deux formulations à voix haute. La première promettait un résultat chiffré. La seconde présente les outils décrits dans la fiche. Demandez à un candidat d’expliquer le passage d’une version à l’autre."
+    ],
+    [
+      "Donner un mandat à un agent contradicteur",
+      "Cherchez une affirmation courte dont la source ne fournit pas la preuve.",
+      [
+        "Fichiers accessibles · la fiche fictive et le brouillon.",
+        "Réponse · affirmation, passage d’appui ou « à confirmer ».",
+        "Rendu · une piste de correction à examiner par le candidat."
+      ],
+      "Un exemple de relevé préparé associe « doublera vos notes » à « aucune donnée sur les notes » dans la fiche. Le candidat vérifie ce constat lui-même. La mission se termine au relevé ; le pilote garde la validation."
+    ],
+    [
+      "À vous de mettre une règle à l’épreuve",
+      "Travaillez à partir de deux variantes et de leur source.",
+      [
+        "A · Relevez un invariant, un champ variable et un gabarit.",
+        "B · Annoncez une règle et comparez prédictions et observations.",
+        "Ensemble · corrigez une affirmation et expliquez pourquoi."
+      ],
+      "En binôme, l’un donne la règle et l’autre cherche sa limite. Inversez les rôles. Si 30 minutes supplémentaires sont disponibles, introduisez un fait source erroné et suivez-le dans trois sorties."
+    ],
+    [
+      "Préparer les données de S16",
+      "Remplissez le tableau « champ, valeur, source ou justification ».",
+      [
+        "titre · Révision du guide · choix éditorial",
+        "proposition · Le journal explique ce qui a changé et pourquoi. · journal S12",
+        "action · Souhaitez-vous voir un extrait du journal de corrections ? · choix conservé de S14"
+      ],
+      "Faites compléter le tableau avec les données du candidat. Les faits sont reliés à une source. Le public, la formulation et l’action peuvent relever d’un choix expliqué. Ajoutez le seuil et la règle à tester en S16."
+    ],
+    [
+      "Recueillir la preuve de S15",
+      "Un invariant, une variable, une condition, les deux tests et une limite expliquée.",
+      [
+        "04-communication/comprendre-regles-automatisation.md",
+        "preuve-15-regles-adaptation-automatisation",
+        "07-portfolio/preuves-module-04.md"
+      ],
+      "85–90 min · Faites rouvrir la trace. Demandez l’avant/après corrigé et les deux essais réellement observés. Le candidat ajoute une entrée à l’index existant. Le pilote partira des pièces examinées pour prendre sa décision."
+    ],
+    [
+      "Lundi 16 novembre · S16",
+      "Apportez votre tableau de données et une règle de contrôle testable.",
+      [
+        "Ouvrir le notebook guidé.",
+        "Modifier une valeur et relancer les cellules concernées.",
+        "Corriger un brouillon, exporter puis rouvrir le résultat local."
+      ],
+      "Clôturez en demandant à chacun de compléter la phrase : « Ma règle vérifie… Pour vérifier le sens, je dois encore… ». En S16, le candidat exécutera son notebook, contrôlera les sorties et classera sa preuve."
+    ]
+  ],
+  "groups": [
+    [
+      "Projeter et conduire",
+      [
+        [
+          "projection/seance-15-que-verifie-une-regle.pptx",
+          "Diaporama éditable et notes du formateur",
+          "PPTX"
+        ],
+        [
+          "projection/seance-15-que-verifie-une-regle.pdf",
+          "Diaporama à projeter",
+          "PDF"
+        ],
+        [
+          "documents/conducteur-formateur-s15.pdf",
+          "Conducteur formateur · 90 minutes",
+          "PDF"
+        ],
+        [
+          "documents/conducteur-formateur-s15.docx",
+          "Conducteur modifiable",
+          "DOCX"
+        ],
+        [
+          "atelier/affiche-s15.png",
+          "Affiche du vendredi 13 novembre",
+          "PNG"
+        ]
+      ]
+    ],
+    [
+      "Distribuer et corriger",
+      [
+        [
+          "documents/fiche-candidat-s15.pdf",
+          "Fiche candidat à remplir ou imprimer",
+          "PDF"
+        ],
+        [
+          "documents/fiche-candidat-s15.docx",
+          "Fiche candidat modifiable",
+          "DOCX"
+        ],
+        [
+          "documents/corrige-regles-s15.pdf",
+          "Corrigé des règles et du contre-exemple",
+          "PDF"
+        ],
+        [
+          "documents/corrige-regles-s15.docx",
+          "Corrigé modifiable",
+          "DOCX"
+        ],
+        [
+          "atelier/comprendre-regles-automatisation.md",
+          "Modèle de la trace S15",
+          "MD"
+        ],
+        [
+          "atelier/preuves-module-04.md",
+          "Entrée à ajouter au portfolio",
+          "MD"
+        ],
+        [
+          "atelier/preparation-s16.md",
+          "Tableau de données vierge pour S16",
+          "MD"
+        ]
+      ]
+    ],
+    [
+      "Tester et observer",
+      [
+        [
+          "demo/cas-regles-s15.json",
+          "Deux messages, quatre formats et cas de test",
+          "JSON"
+        ],
+        [
+          "demo/tester-regles-s15.py",
+          "Script Python de démonstration",
+          "PY"
+        ],
+        [
+          "demo/tester-regles-s15.ipynb",
+          "Notebook Jupyter avec ses sorties",
+          "IPYNB"
+        ],
+        [
+          "demo/sorties-observees-s15.md",
+          "Sorties observées pour la projection hors ligne",
+          "MD"
+        ],
+        [
+          "demo/mission-agent-tests-s15.md",
+          "Mandat de l’agent chargé des tests",
+          "MD"
+        ],
+        [
+          "atelier/prompts-seance-15.md",
+          "Les quatre prompts S15",
+          "MD"
+        ]
+      ]
+    ],
+    [
+      "Ouvrir les sources",
+      [
+        [
+          "sources/message-s14-exemple.md",
+          "Exemple fictif au format de la trace S14",
+          "MD"
+        ],
+        [
+          "sources/guide-pratique-v2-a-relire.md",
+          "Guide S12 · V2 à relire",
+          "MD"
+        ],
+        [
+          "sources/journal-corrections-v1-v2.md",
+          "Journal du guide · V1 et V2",
+          "MD"
+        ],
+        [
+          "sources/guide-ete-v1.pdf",
+          "Guide Situation-Actuelle-IA · édition maître V1.0",
+          "PDF"
+        ],
+        [
+          "sources/fiche-source-samira.md",
+          "Fiche fictive de Samira · mini-guide de révisions",
+          "MD"
+        ],
+        [
+          "sources/prompt-maitre-module-04.md",
+          "Prompt maître du Module 04",
+          "MD"
+        ]
+      ]
+    ]
+  ]
+}

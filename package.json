@@ -1,0 +1,17 @@
+{
+  "name": "atelier-seance-15-ln-ia",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Atelier LN-IA S15 — Que vérifie une règle ?",
+  "engines": {"node": "^20.19.0 || >=22.12.0"},
+  "scripts": {
+    "predev": "node scripts/preparer.mjs",
+    "dev": "vite --host 0.0.0.0",
+    "prebuild": "node scripts/preparer.mjs",
+    "build": "vite build && node scripts/autonome.mjs",
+    "preview": "vite preview --host 127.0.0.1",
+    "check": "node --check src/main.js && node scripts/verifier.mjs"
+  },
+  "devDependencies": {"vite": "8.2.1"}
+}

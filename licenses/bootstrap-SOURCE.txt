@@ -1,0 +1,13 @@
+Bootstrap 5.3.8, feuille de style officielle distribuée sous licence MIT.
+Version immuable identifiée par le blob Git et contrôlée avant inclusion.
+
+CSS     https://github.com/twbs/bootstrap/blob/v5.3.8/dist/css/bootstrap.min.css
+Licence https://github.com/twbs/bootstrap/blob/v5.3.8/LICENSE
+CSS, SHA-256   d85327d99c7a3ee1f9b5d0500d1370acea3ad2db39c163c2f51f232baedbdede
+CSS, blob Git  1d8bac41b3b586410aed1077d9abc05e169cb924
+Licence, Git   fa7c00bc4ebd5dc9c0b1e7f8c4b6a202fd9fa816
+
+La feuille de style est intégrée au projet Vite et à la présentation hors ligne.
+
+Carte des sources CSS  https://github.com/twbs/bootstrap/blob/v5.3.8/dist/css/bootstrap.min.css.map
+Carte, blob Git        39dfdfb1d0ce6f4e5c770ae070d143045700436c

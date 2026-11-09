@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.log
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+~$*
+.vscode/
+.idea/
+
+# Dossier candidat versionné dans son propre dépôt
+/mon-dossier-challenge-module04/
