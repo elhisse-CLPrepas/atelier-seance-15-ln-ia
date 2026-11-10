@@ -85,6 +85,22 @@
     [
       "Que faut-il préparer pour S16 ?",
       "Une règle testable et le tableau « champ, valeur, source ou justification » qui permettra de renseigner le notebook."
+    ],
+    [
+      "Que doit répondre le contrôle à un message vide ou composé d’espaces ?",
+      "« À compléter ». Vérifier la présence du contenu précède le contrôle de longueur ; un texte vide ne devient pas un message acceptable."
+    ],
+    [
+      "Quelle différence entre Python et Jupyter dans cet atelier ?",
+      "Python exécute les instructions. Jupyter réunit les explications, les cellules de code et leurs sorties ; son noyau Python effectue le calcul."
+    ],
+    [
+      "Comment distinguer une prédiction d’une observation ?",
+      "La prédiction est écrite avant le test. L’observation est la sortie réellement obtenue après exécution. Un résultat attendu ou fourni en exemple ne prouve pas votre propre exécution."
+    ],
+    [
+      "Comment corriger « neuf annexes » propagé dans trois brouillons ?",
+      "Retrouvez « huit annexes » dans le guide, corrigez la donnée d’entrée puis relancez les brouillons. Les deux mots ont quatre lettres : la longueur seule ne détecte pas cette erreur."
     ]
   ],
   "quiz": [
@@ -147,6 +163,26 @@
       ],
       0,
       "Ces éléments permettent de rejouer le contrôle et de retrouver l’origine des valeurs du prochain notebook."
+    ],
+    [
+      "Un message ne contient que des espaces. Quel résultat le contrôle doit-il afficher ?",
+      [
+        "Longueur acceptable car il fait moins de 400 caractères",
+        "À compléter car le contenu est absent",
+        "À raccourcir car les espaces sont interdits"
+      ],
+      1,
+      "Le contrôle vérifie d’abord la présence d’un contenu après retrait des espaces de bord. Un message vide doit être complété avant de juger sa longueur."
+    ],
+    [
+      "Trois brouillons reprennent « neuf annexes », mais le guide en indique huit. Quelle démarche permet de corriger la répétition ?",
+      [
+        "Augmenter le seuil pour éviter une alerte",
+        "Garder les trois textes car leur longueur est acceptable",
+        "Vérifier le guide, corriger la donnée d’entrée puis relancer et relire les trois sorties"
+      ],
+      2,
+      "Corriger la donnée d’entrée traite l’origine de l’erreur. Relancer puis relire les sorties permet de vérifier la correction ; le comptage ne distingue pas neuf et huit, deux mots de quatre lettres."
     ]
   ],
   "prompts": [
@@ -794,6 +830,41 @@
         [
           "sources/prompt-maitre-module-04.md",
           "Prompt maître du Module 04",
+          "MD"
+        ]
+      ]
+    ],
+    [
+      "02-PROMPT · Instructions et prompts maîtres S13 à S15",
+      [
+        [
+          "02-PROMPT/01-INSTRUCTIONS-PARTICIPANT-S13.md",
+          "01 INSTRUCTIONS PARTICIPANT S13",
+          "MD"
+        ],
+        [
+          "02-PROMPT/01-INSTRUCTIONS-PARTICIPANT-S14.md",
+          "01 INSTRUCTIONS PARTICIPANT S14",
+          "MD"
+        ],
+        [
+          "02-PROMPT/02-PROMPT-MAITRE-S13.md",
+          "02 PROMPT MAITRE S13",
+          "MD"
+        ],
+        [
+          "02-PROMPT/02-PROMPT-MAITRE-S14.md",
+          "02 PROMPT MAITRE S14",
+          "MD"
+        ],
+        [
+          "02-PROMPT/01-INSTRUCTIONS-PARTICIPANT-S15.md",
+          "01 INSTRUCTIONS PARTICIPANT S15",
+          "MD"
+        ],
+        [
+          "02-PROMPT/02-PROMPT-MAITRE-S15.md",
+          "02 PROMPT MAITRE S15",
           "MD"
         ]
       ]

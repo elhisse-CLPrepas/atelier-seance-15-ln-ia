@@ -27,6 +27,8 @@ html=html.replace(/<a\b[^>]*\bhref="\.\/(ressources\/[^"]+)"[^>]*>/g,(tag,file)=
 for(const file of ['assets/logo-web.webp','assets/favicon.png','ressources/atelier/affiche-s15.png']){
  html=html.replaceAll('="./'+file+'"','="'+await dataURI(file)+'"')
 }
+const images=[...html.matchAll(/<img\b[^>]*\bsrc="\.\/(ressources\/affiches\/[^"]+)"/g)]
+for(const [,file] of images)html=html.replaceAll('="./'+file+'"','="'+await dataURI(file)+'"')
 html=html.replace('</body>',()=>'<script>'+js+'</script></body>')
 await writeFile(new URL('OUVRIR-SEANCE-15.html',root),html)
 console.log('Édition autonome créée avec '+new Set(links.map(x=>x[1])).size+' ressources intégrées.')

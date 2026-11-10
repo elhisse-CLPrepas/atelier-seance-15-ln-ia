@@ -6,7 +6,7 @@ L'objectif est de distinguer ce qu'une règle peut vérifier automatiquement (pr
 
 ## Commencer immédiatement
 
-1. Ouvrir [OUVRIR-SEANCE-15.html](OUVRIR-SEANCE-15.html) dans un navigateur récent. Cette édition autonome contient le code des activités et les 24 ressources téléchargeables ; elle peut être utilisée hors connexion sans installer Node.js.
+1. Ouvrir [OUVRIR-SEANCE-15.html](OUVRIR-SEANCE-15.html) dans un navigateur récent. Cette édition autonome contient le code des activités et les 35 ressources téléchargeables ; elle peut être utilisée hors connexion sans installer Node.js.
 2. Lire [COMMENCER-ICI.md](COMMENCER-ICI.md) pour le conducteur détaillé, les consignes et le minutage.
 3. Choisir « Projeter la séance », puis parcourir les 25 diapositives. Les flèches permettent de naviguer et Échap ferme la projection.
 4. Utiliser le carnet candidat pour prédire les résultats, exécuter les essais et exporter la preuve.
@@ -40,8 +40,8 @@ Les PDF, le PowerPoint et le notebook à la racine sont des copies de commodité
 |---|---|
 | Intégrité du manifeste `docs/EMPREINTES-SHA256.txt` | 80 fichiers vérifiés, tous conformes |
 | `npm.cmd run check` | Réussi : syntaxe de `main.js` et assertions du vérificateur |
-| Structure pédagogique et application | 25 diapositives, 11 rubriques, 8 cartes, 6 questions de méthode, 6 questions de quiz et 4 prompts contrôlés |
-| Ressources distribuées | 24 ressources présentes ; copies `public/`, `dist/` et embarquées comparées par le vérificateur |
+| Structure pédagogique et application | 25 diapositives, 11 rubriques, 12 cartes, 8 questions de méthode, 8 questions de quiz et 4 prompts contrôlés |
+| Ressources distribuées | 35 ressources présentes ; copies `public/`, `dist/` et embarquées comparées par le vérificateur |
 | Logique métier | Import S14, gabarit, seuils 400/401, champ vide, contre-exemple, formats, propagation et construction des exports contrôlés |
 | Démonstration Python | Exécution réussie avec Python 3.14.5 ; résultats attendus aux seuils et sur les exemples |
 | Environnement | Node.js 24.12.0 présent ; `npm.ps1` bloqué par la politique PowerShell, `npm.cmd` utilisable |
@@ -141,3 +141,7 @@ Le bilan du 4 novembre ci-dessus décrit l’état historique avant initialisati
 Le 9 novembre 2026, la compilation locale et les vérifications automatisées ont réussi.
 
 Le dossier candidat mon-dossier-challenge-module04 possède son propre dépôt Git : il est exclu du dépôt S15 pour préserver son historique indépendant.
+
+## Instructions et prompts S13 à S15
+
+Le dossier [02-PROMPT](02-PROMPT/) conserve les quatre fichiers de S13/S14 et ajoute les instructions participant et le prompt maître S15. Il est aussi disponible dans `mon-dossier-challenge-module04/02-PROMPT/`. Les six fichiers sont téléchargeables dans les ressources du site et embarqués dans l’édition autonome.

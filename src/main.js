@@ -161,7 +161,7 @@ $$('[data-copy]').forEach(b=>b.onclick=async()=>{
 })
 
 function cleanQuizFeedback(){
- $$('.qfeedback').forEach(e=>e.hidden=true);$('#quiz-result').textContent='Six situations de contrôle. Chaque réponse reçoit une explication.'
+ $$('.qfeedback').forEach(e=>e.hidden=true);$('#quiz-result').textContent='Huit situations de contrôle. Chaque réponse reçoit une explication.'
 }
 $('#quiz-form').addEventListener('change',e=>{if(e.target.name?.startsWith('q')){state.quiz[Number(e.target.name.slice(1))]=Number(e.target.value);cleanQuizFeedback();persist()}})
 state.quiz.forEach((v,i)=>{if(v!==null)$('#quiz-form input[name="q'+i+'"][value="'+v+'"]').checked=true})

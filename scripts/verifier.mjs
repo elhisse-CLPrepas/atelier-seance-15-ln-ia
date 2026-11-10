@@ -13,7 +13,7 @@ const read=async file=>(await bytes(file)).toString('utf8')
 const data=JSON.parse(await read('src/seance.json')), c=JSON.parse(await read('public/ressources/demo/cas-regles-s15.json'))
 const nav=['accueil','presentation','methode','demonstration','atelier','prompts','flashcards','quiz','validation','portfolio','ressources']
 assert.deepEqual(data.rubriques.map(item=>item[0]),nav)
-assert.deepEqual([data.slides.length,data.questions.length,data.cards.length,data.quiz.length,data.prompts.length],[25,6,8,6,4])
+assert.deepEqual([data.slides.length,data.questions.length,data.cards.length,data.quiz.length,data.prompts.length],[25,6,12,8,4])
 assert(data.quiz.every(([,ops,ans,why])=>ans>=0&&ans<ops.length&&why.length>20))
 assert.equal(c.seuil,SEUIL)
 assert.deepEqual([c.messageA,c.messageC,c.samira.avant,c.samira.apres].map(countChars),[149,159,28,76])
@@ -46,8 +46,9 @@ for(const t of [c.messageA,c.messageC,c.samira.avant,c.samira.apres,c.preuve,'40
 assert(ix.includes('../'+c.trace)&&ix.includes(c.preuve)&&ix.includes(f.limite))
 assert.equal(note.essais[0].observation,c.ok);assert.equal(note.essais[1].observation,c.alerte);assert.equal(note.champs.length,6);assert.equal(note.decision_du_pilote,null)
 assert.equal(buildHandoff({}).essais[0].observation,null);assert.equal(buildHandoff({}).champs[0].valeur,null)
-const files=data.groups.flatMap(([,entries])=>entries.map(([p])=>'ressources/'+p))
-assert.equal(files.length,24);assert.equal(new Set(files).size,files.length)
+const posterFiles=['module-04','seance-13','seance-14','seance-15','seance-16'].map(slug=>'ressources/affiches/'+slug+'.png')
+const files=[...data.groups.flatMap(([,entries])=>entries.map(([p])=>'ressources/'+p)),...posterFiles]
+assert.equal(files.length,35);assert.equal(new Set(files).size,files.length)
 const compiled=await read('dist/index.html'),single=await read('OUVRIR-SEANCE-15.html')
 for(const html of [compiled,single]){
  assert.deepEqual([...html.matchAll(/<section id="([a-z]+)" class="page/g)].map(m=>m[1]),nav)
@@ -68,7 +69,7 @@ assert.equal(embedded.size,files.length)
 for(const file of files){const b=await bytes('public/'+file);assert(b.equals(embedded.get(file)),file);assert(b.equals(await bytes('dist/'+file)),file)}
 assert(!/<script[^>]+src=|type="module"|<link[^>]+rel="stylesheet"|(?:href|src)="\.\/(?:assets|ressources)\//.test(single));new Script([...single.matchAll(/<script>([\s\S]*?)<\/script>/g)].at(-1)[1])
 assert.equal(createHash('sha256').update(await bytes('src/vendor/bootstrap.min.css')).digest('hex'),'d85327d99c7a3ee1f9b5d0500d1370acea3ad2db39c163c2f51f232baedbdede')
-console.log('25 diapositives, 11 rubriques, 8 cartes, 6 questions, 4 prompts ; navigation et 24 ressources autonomes vérifiées.')
+console.log('25 diapositives, 11 rubriques, 12 cartes, 8 questions, 4 prompts ; navigation et 35 ressources autonomes vérifiées.')
 console.log('Import S14, gabarit, essais 400/401, contre-exemple, quatre formats et trois exports contrôlés.')
 
 const essaisPropagation=['neuf','huit'].map(n=>apercusPropagation(n))

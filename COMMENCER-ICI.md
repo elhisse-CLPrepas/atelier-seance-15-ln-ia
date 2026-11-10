@@ -5,7 +5,7 @@ Prof. Abderrahman El Hisse · Séance d’approfondissement de 90 minutes
 
 ## Ouvrir et projeter
 
-1. Extrayez le ZIP. Dans le dossier `atelier-seance-15-ln-ia`, ouvrez `OUVRIR-SEANCE-15.html` dans un navigateur récent. Vous pouvez aussi copier ce fichier seul sur une clé USB. Il contient les 24 ressources à télécharger et le code des activités.
+1. Extrayez le ZIP. Dans le dossier `atelier-seance-15-ln-ia`, ouvrez `OUVRIR-SEANCE-15.html` dans un navigateur récent. Vous pouvez aussi copier ce fichier seul sur une clé USB. Il contient les 35 ressources à télécharger et le code des activités.
 2. Choisissez « Projeter la séance ». Flèches gauche et droite pour naviguer, Échap pour fermer. Les notes s’affichent sur l’écran partagé si vous activez « Notes formateur ». Pour les garder sur un autre écran, utilisez le mode Présentateur du PowerPoint.
 3. Pour projeter directement, ouvrez le PowerPoint éditable ou le PDF de 25 pages dans `public/ressources/projection/`. Pour les participants, imprimez la fiche A4 ou distribuez le PDF remplissable de trois pages.
 
